@@ -2,9 +2,9 @@
 Download and convert one or more webpages into an ePub file.
 
 ## Packages used
-- [requests]()
-- [readabilipy]() for extracting the actual title and content from the page data
-- [ebooklib]() to create the ePub file
+- [requests](https://pypi.org/project/requests/)
+- [readabilipy](https://pypi.org/project/readability/) for extracting the actual title and content from the page data
+- [ebooklib](https://pypi.org/project/EbookLib/) to create the ePub file
 
 ## Quickstart
 
@@ -39,3 +39,7 @@ under the terms of the [MIT License](LICENSE.md).
 
 This software is provided "AS IS", WITHOUT WARRANTY OF ANY KIND,
 express or implied. See the [MIT License](LICENSE.md) for details.
+
+##Contact
+
+[eklop@proton.me](mailto:eklop@proton.me)
