@@ -1,5 +1,5 @@
-# www2epub
-Download and convert web content into an ePub file.
+# web2epub
+Download and convert one or more webpages into an ePub file.
 
 ## Packages used
 - [requests]()
@@ -17,17 +17,25 @@ python www2epub.py <link>
 
 ## Examples
 
-**Download a single URL**
-`python www2epub.py https://100r.co/site/off_the_grid.html`
-- This script will try to extract title and author from the content
+`python www2epub.py https://100r.co/site/off_the_grid.html`  
 
-**Download multiple URL's**
-- Comma separate two or more URL's. Each URL will be added as a chapter to the ePub.
-- You have to manually enter a title and author
+Comma separate two or more URL's. Each URL will be added as a chapter to the ePub.  
 
-`python www2epub.py https://100r.co/site/off_the_grid.html,https://100r.co/site/cooking.html`
+`python www2epub.py https://100r.co/site/off_the_grid.html,https://100r.co/site/cooking.html`  
 
-## Disclaimer & License
-This script could be used to download copyrighted content. 
-I'm not responsible for any copyright infringement caused by using this script. 
-See [MIT License](LICENSE.md) for more details.
+This script will try to extract title and author from the content. If you provide more than one url, you will be prompted to enter title and author.  
+
+## Disclaimer
+Creator of this software is not in charge of any and has no responsibility for any kind of:
+- Unlawful or illegal use of the tool.
+- Legal or Law infringement (acted in any country, state, municipality, place) by third parties and users.
+- Act against ethical and / or human moral, ethic, and peoples and cultures of the world.
+- Malicious act, capable of causing damage to third parties, promoted or distributed by third parties or the user through this tool.
+
+## License
+This is free and open source software. You can use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of it,
+under the terms of the [MIT License](LICENSE.md).
+
+This software is provided "AS IS", WITHOUT WARRANTY OF ANY KIND,
+express or implied. See the [MIT License](LICENSE.md) for details.
