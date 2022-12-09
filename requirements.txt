@@ -1,0 +1,14 @@
+beautifulsoup4==4.11.1
+certifi==2022.12.7
+charset-normalizer==2.1.1
+EbookLib==0.18
+html5lib==1.1
+idna==3.4
+lxml==4.9.1
+readabilipy==0.2.0
+regex==2022.10.31
+requests==2.28.1
+six==1.16.0
+soupsieve==2.3.2.post1
+urllib3==1.26.13
+webencodings==0.5.1
