@@ -12,16 +12,16 @@ Download and convert one or more webpages into an ePub file.
 python -m venv env
 source env/bin/activate
 pip install -r requirements.txt
-python www2epub.py <link>
+python web2epub.py <link>
 ```
 
 ## Examples
 
-`python www2epub.py https://100r.co/site/off_the_grid.html`  
+`python web2epub.py https://100r.co/site/off_the_grid.html`  
 
 Comma separate two or more URL's. Each URL will be added as a chapter to the ePub.  
 
-`python www2epub.py https://100r.co/site/off_the_grid.html,https://100r.co/site/cooking.html`  
+`python web2epub.py https://100r.co/site/off_the_grid.html,https://100r.co/site/cooking.html`  
 
 This script will try to extract title and author from the content. If you provide more than one url, you will be prompted to enter title and author.  
 
