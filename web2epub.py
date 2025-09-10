@@ -166,10 +166,10 @@ Notes:
 	print(f"Starting download of {len(links)} URL(s)...")
 	for idx, link in enumerate(links):
 		try:
-			logger.info(f'Fetching URL {idx+1}/{len(links)}: {link}')
+			logger.info('Fetching URL %d/%d: %s', idx+1, len(links), link)
 			request = get(link, timeout=5)
 			if bool(request.text) == False:
-				logger.warning(f'Empty response from {link}')
+				logger.warning('Empty response from %s', link)
 				if input('Do you want to skip this URL and continue? [y/n]') == 'y':
 					continue
 				else:
@@ -180,6 +180,7 @@ Notes:
 				page_content = simple_json_from_html_string(request.text, use_readability=True)
 
 				chapter_content = page_content['plain_content']
+				chapter_content = f"<h1>{page_content['title']}</h1>{chapter_content}"
 
 				if not epub_title:
 					epub_title = page_content['title']
@@ -188,13 +189,18 @@ Notes:
 					epub_author = page_content['byline'] if page_content['byline'] else "Various authors"
 
 				logger.info('Adding content to ePub..')
-				chapter = epub.EpubHtml(title=page_content['title'], file_name=str('chapter{}.xhtml'.format(idx+1)), lang='en')
+
+				chapter = epub.EpubHtml(
+        			title=page_content['title'], 
+           			file_name=str('chapter{}.xhtml'.format(idx+1)), 
+              		lang='en')
+
 				chapter.content = u'{}'.format(chapter_content)
 				book.add_item(chapter)
 				chapters.append(chapter)
 		except Exception as e:
-			logger.error(f'Error fetching {link}: {str(e)}')
-			logger.info(f'Skipping URL {idx+1}/{len(links)} and continuing...')
+			logger.error('Error fetching %s: %s', link, str(e))
+			logger.info('Skipping URL %d/%d and continuing...', idx+1, len(links))
 			continue
 
 	logger.info("Finishing epub..")
